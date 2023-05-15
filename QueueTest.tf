@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    genesyscloud = {
+      source  = "registry.terraform.io/mypurecloud/genesyscloud"
+      version = "1.15.0"
+    }
+  }
+}
+
 resource "genesyscloud_routing_queue" "testingthis" {
   acw_wrapup_prompt       = "MANDATORY_TIMEOUT"
   auto_answer_only        = false
